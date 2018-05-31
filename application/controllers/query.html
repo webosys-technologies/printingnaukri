@@ -1,0 +1,29 @@
+1) pincode to pincode
+ALTER TABLE `companies` CHANGE `company_picode` `company_pincode` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
+
+2)set date data type in users table
+ALTER TABLE `users` CHANGE `user_created_at` `user_created_at` DATE NOT NULL
+
+3)member_otp column in member table
+ALTER TABLE `members` ADD `member_otp` VARCHAR(255) NOT NULL AFTER `member_resume`
+
+4)recruiter_otp column in recruiter table
+ALTER TABLE `recruiters` ADD `recruiter_otp` VARCHAR(255) NOT NULL AFTER `recruiter_password`
+
+5)drop column company_id in companies
+ALTER TABLE companies DROP COLUMN company_id
+
+6)add again company id in  compmanies
+ALTER TABLE `companies` ADD `company_id` INT(11) NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`company_id`)
+
+7)rename column picode to pincode
+ALTER TABLE `companies` CHANGE `company_picode` `company_pincode` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+8)saved table
+CREATE TABLE `saved_job` ( `save_id` INT(11) NOT NULL AUTO_INCREMENT , `job_id` INT(11) NOT NULL , `member_id` INT(11) NOT NULL , `recruiter_id` INT(11) NOT NULL , `saved_at` DATE NOT NULL , PRIMARY KEY (`save_id`)) ENGINE = InnoDB;
+
+9)company id column in saved_job
+ALTER TABLE `saved_job` ADD `company_id` INT(11) NOT NULL AFTER `recruiter_id`;
+
+100company id column in applied_job
+ALTER TABLE `applied_job` ADD `company_id` INT(11) NOT NULL AFTER `recruiter_id`;
