@@ -240,7 +240,7 @@ $("#show_otp_box").click(function(){
  
 </script>
     
-    <img src="<?php echo  base_url();?>assets/images/printing_logo.png" width="350px" height="80px">
+    <img src="<?php echo  base_url();?>assets/images/printing_logo.PNG" width="350px" height="80px">
 <!--<body style="background:#d2d6de">--> 
  
  <!--<header class="header" id="header">-->
