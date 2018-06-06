@@ -62,6 +62,40 @@
                 padding-top:0px;
                
             }
+            
+            
+             .icon {
+  padding: 10px;
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
             </style>
 </head>
 
@@ -239,8 +273,18 @@ $("#show_otp_box").click(function(){
 
  
 </script>
-    
-    <img src="<?php echo  base_url();?>assets/images/printing_logo.PNG" width="350px" height="80px">
+    <div class="row" >
+        <div class="col-md-6">
+    <img src="<?php echo  base_url();?>assets/images/printing_logo.PNG" width="310px" height="63px">
+    </div>
+         <div class="col-md-3 col-md-offset-3" style="padding-top:6px">
+              <a href="#" class="fa fa-google icon"></a>&nbsp;
+   <a href="#" class="fa fa-facebook icon"></a>  &nbsp;
+   <a href="#" class="fa fa-skype icon"></a>&nbsp;
+   <a href="#" class="fa fa-linkedin icon"></a>
+    </div>
+    </div>
+   
 <!--<body style="background:#d2d6de">--> 
  
  <!--<header class="header" id="header">-->
